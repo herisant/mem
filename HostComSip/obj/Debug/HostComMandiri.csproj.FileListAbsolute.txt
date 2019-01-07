@@ -1,0 +1,8 @@
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\bin\Debug\HostComSip.exe.config
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\bin\Debug\HostComSip.exe
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\bin\Debug\HostComSip.pdb
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComMandiri.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComMandiri.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComMandiri.csproj.CopyComplete
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComSip.exe
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComSip.pdb

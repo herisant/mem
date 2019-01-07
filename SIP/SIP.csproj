@@ -40,7 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\VS Studio Project\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\..\VS Studio Project\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Costura, Version=1.6.2.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.1.6.2\lib\dotnet\Costura.dll</HintPath>
@@ -114,6 +114,12 @@
     <Compile Include="FormLoading.Designer.cs">
       <DependentUpon>FormLoading.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRunningText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRunningText.Designer.cs">
+      <DependentUpon>FormRunningText.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSetAbsen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoading.resx">
       <DependentUpon>FormLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRunningText.resx">
+      <DependentUpon>FormRunningText.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSetAbsen.resx">
       <DependentUpon>FormSetAbsen.cs</DependentUpon>

@@ -1,33 +1,33 @@
 Device
- DeviceName: \\?\HID#VID_FFFF&PID_0035&MI_00#8&3402a834&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}
- DeviceType: KEYBOARD
- DeviceHandle: E7E0431
- Name: HID Keyboard Device
+ DeviceName: \\?\HID#VID_1C4F&PID_0002&MI_01&Col01#8&5df356e&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
+ DeviceType: HID
+ DeviceHandle: 10050
+ Name: HID-compliant consumer control device
 
 DeviceInfo
  Size: 32
- Type: 1
+ Type: 2
 
 DeviceInfoKeyboard
- Type: 81
- SubType: 0
- KeyboardMode: 1
- NumberOfFunctionKeys: 12
- NumberOfIndicators 3
- NumberOfKeysTotal: 110
+ Type: 7247
+ SubType: 2
+ KeyboardMode: 272
+ NumberOfFunctionKeys: 65548
+ NumberOfIndicators 0
+ NumberOfKeysTotal: 0
 
 HidInfo
- VendorID: 81
- ProductID: 0
- VersionNumber: 1
+ VendorID: 7247
+ ProductID: 2
+ VersionNumber: 272
  UsagePage: 12
- Usage: 0
+ Usage: 1
 
 =========================================================================================================
 Device
  DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col03#8&1b3c3aec&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}
  DeviceType: HID
- DeviceHandle: 20043
+ DeviceHandle: 1004E
  Name: HID-compliant vendor-defined device
 
 DeviceInfo
@@ -53,7 +53,7 @@ HidInfo
 Device
  DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col02#8&1b3c3aec&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}
  DeviceType: HID
- DeviceHandle: 20041
+ DeviceHandle: 1004C
  Name: HID-compliant vendor-defined device
 
 DeviceInfo
@@ -79,7 +79,7 @@ HidInfo
 Device
  DeviceName: \\?\HID#VID_046D&PID_C52F&MI_01&Col01#8&1b3c3aec&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
  DeviceType: HID
- DeviceHandle: 2003F
+ DeviceHandle: 1004A
  Name: HID-compliant consumer control device
 
 DeviceInfo
@@ -103,35 +103,9 @@ HidInfo
 
 =========================================================================================================
 Device
- DeviceName: \\?\HID#VID_1C4F&PID_0002&MI_01&Col01#8&8907b3b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
- DeviceType: HID
- DeviceHandle: 2003D
- Name: HID-compliant consumer control device
-
-DeviceInfo
- Size: 32
- Type: 2
-
-DeviceInfoKeyboard
- Type: 7247
- SubType: 2
- KeyboardMode: 272
- NumberOfFunctionKeys: 65548
- NumberOfIndicators 0
- NumberOfKeysTotal: 0
-
-HidInfo
- VendorID: 7247
- ProductID: 2
- VersionNumber: 272
- UsagePage: 12
- Usage: 1
-
-=========================================================================================================
-Device
- DeviceName: \\?\HID#VID_1C4F&PID_0002&MI_00#8&30fb2904&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}
+ DeviceName: \\?\HID#VID_1C4F&PID_0002&MI_00#8&190f51ac&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}
  DeviceType: KEYBOARD
- DeviceHandle: 1003B
+ DeviceHandle: 10048
  Name: HID Keyboard Device
 
 DeviceInfo

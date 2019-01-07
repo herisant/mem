@@ -25,3 +25,30 @@ C:\Users\damar\Documents\Visual Studio 2017\READER\HostComSip\obj\Debug\HostComS
 C:\Users\damar\Documents\Visual Studio 2017\READER\HostComSip\obj\Debug\HostComSip.exe
 C:\Users\damar\Documents\Visual Studio 2017\READER\HostComSip\obj\Debug\HostComSip.pdb
 C:\Users\damar\Documents\Visual Studio 2017\READER\HostComSip\obj\Debug\HostComSip.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\bin\Debug\HostComSip.exe.config
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\bin\Debug\HostComSip.exe
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\bin\Debug\HostComSip.pdb
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComSip.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComSip.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComSip.csproj.CopyComplete
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComSip.exe
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\HostComSip\obj\Debug\HostComSip.pdb
+C:\Users\damar\Documents\Mandiri\READER\HostComSip\bin\Debug\HostComSip.exe.config
+C:\Users\damar\Documents\Mandiri\READER\HostComSip\bin\Debug\HostComSip.exe
+C:\Users\damar\Documents\Mandiri\READER\HostComSip\bin\Debug\HostComSip.pdb
+C:\Users\damar\Documents\Mandiri\READER\HostComSip\obj\Debug\HostComSip.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Mandiri\READER\HostComSip\obj\Debug\HostComSip.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Mandiri\READER\HostComSip\obj\Debug\HostComSip.csproj.CopyComplete
+C:\Users\damar\Documents\Mandiri\READER\HostComSip\obj\Debug\HostComSip.exe
+C:\Users\damar\Documents\Mandiri\READER\HostComSip\obj\Debug\HostComSip.pdb
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\bin\Debug\HostComSip.exe.config
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\bin\Debug\HostComSip.exe
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\bin\Debug\HostComSip.pdb
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\obj\Debug\HostComSip.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\obj\Debug\HostComSip.ConsoleForm.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\obj\Debug\HostComSip.csproj.GenerateResource.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\obj\Debug\HostComSip.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\obj\Debug\HostComSip.csproj.CopyComplete
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\obj\Debug\HostComSip.exe
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\obj\Debug\HostComSip.pdb
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\HostComSip\bin\Debug\Newtonsoft.Json.dll

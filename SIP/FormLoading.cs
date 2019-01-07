@@ -294,7 +294,7 @@ namespace SIP
                     using (HttpClient client = new HttpClient())
                     {
 
-                        client.BaseAddress = new Uri("http://www.siponline.id/apps/main/index.php/Service/mesinPostStat");
+                        client.BaseAddress = new Uri("http://104.196.52.215/apps/main/index.php/Service/mesinPostStat");
                         client.DefaultRequestHeaders.Accept.Clear();
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("multipart/form-data"));
                         var credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes(
@@ -309,7 +309,7 @@ namespace SIP
                                 };
 
                         var content = new FormUrlEncodedContent(values);
-                        var response = await client.PostAsync("http://www.siponline.id/apps/main/index.php/Service/mesinPostStat", content);
+                        var response = await client.PostAsync("http://104.196.52.215/apps/main/index.php/Service/mesinPostStat", content);
 
                         var responseString = await response.Content.ReadAsStringAsync();
                         //MessageBox.Show(responseString);

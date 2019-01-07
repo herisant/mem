@@ -28,6 +28,9 @@ namespace SIP
         protected string pathHost = System.IO.Path.GetFullPath(System.IO.Path.GetDirectoryName(Application.ExecutablePath)) + @"\HostComSip.exe";
         protected string DatabaseName = "sip_absen";
         protected FirewallSip _security = new FirewallSip();
+        //running text
+        private int xpos = 0, ypos = 0;
+        public string mode = "Right-to-Left";
         #region VARIABLE
         RawInput _rawInput = null;
         const bool CaptureOnlyInForeground = false;
@@ -56,6 +59,14 @@ namespace SIP
             downloadFile();
 
             validasi = msg;
+
+            //running text
+            RunRunningText();
+
+            if (IsProcessOpen("HostComSip") == false)
+            {
+                Process.Start(pathHost);
+            }
         }
         private void LoggerUSB()
         {
@@ -104,14 +115,14 @@ namespace SIP
                     {
                         device_reader_4 = sr.ReadToEnd().Replace("\r\n", "");
                     }
-                    if (line.EndsWith("Reader5.txt"))
-                    {
-                        device_reader_5 = sr.ReadToEnd().Replace("\r\n", "");
-                    }
-                    if (line.EndsWith("Reader6.txt"))
-                    {
-                        device_reader_6 = sr.ReadToEnd().Replace("\r\n", "");
-                    }
+                    //if (line.EndsWith("Reader5.txt"))
+                    //{
+                    //    device_reader_5 = sr.ReadToEnd().Replace("\r\n", "");
+                    //}
+                    //if (line.EndsWith("Reader6.txt"))
+                    //{
+                    //    device_reader_6 = sr.ReadToEnd().Replace("\r\n", "");
+                    //}
                 }
             }
         }
@@ -125,6 +136,14 @@ namespace SIP
         private void timer1_Tick(object sender, EventArgs e)
         {
             labelJAM.Text = DateTime.Now.ToString("dd MMMM yyyy - HH:mm:ss");
+            string timeRestart = DateTime.Now.ToString("HH:mm:ss");
+            if (timeRestart == "00:00:00" && timeRestart == "01:00:00" && timeRestart == "02:00:00")
+            {
+                // Shut down the current app instance
+                Application.Exit();
+                // Restart the app
+                System.Diagnostics.Process.Start(Application.ExecutablePath);
+            }
         }
         private void btnMinimaze_Click(object sender, EventArgs e)
         {
@@ -198,27 +217,28 @@ namespace SIP
                                         keySource4 = e.KeyPressEvent.Source;
                                     }
                                 }
-                            } else if (keySource5 == "" || keySource5 == e.KeyPressEvent.Source)
-                            {
-                                if (keySource1 != e.KeyPressEvent.Source && keySource2 != e.KeyPressEvent.Source && keySource3 != e.KeyPressEvent.Source && keySource4 != e.KeyPressEvent.Source)
-                                {
-
-                                    if (keySource1 != e.KeyPressEvent.Source && keySource2 != e.KeyPressEvent.Source && keySource3 != e.KeyPressEvent.Source && keySource4 != e.KeyPressEvent.Source && keySource6 != e.KeyPressEvent.Source)
-                                    {
-                                        keySource5 = e.KeyPressEvent.Source;
-                                    }
-                                }
-                            } else if (keySource6 == "" || keySource6 == e.KeyPressEvent.Source)
-                            {
-                                if (keySource1 != e.KeyPressEvent.Source && keySource2 != e.KeyPressEvent.Source && keySource3 != e.KeyPressEvent.Source && keySource4 != e.KeyPressEvent.Source && keySource5 != e.KeyPressEvent.Source)
-                                {
-
-                                    if (keySource1 != e.KeyPressEvent.Source && keySource2 != e.KeyPressEvent.Source && keySource3 != e.KeyPressEvent.Source && keySource4 != e.KeyPressEvent.Source && keySource5 != e.KeyPressEvent.Source)
-                                    {
-                                        keySource5 = e.KeyPressEvent.Source;
-                                    }
-                                }
                             }
+                            //else if (keySource5 == "" || keySource5 == e.KeyPressEvent.Source)
+                            //{
+                            //    if (keySource1 != e.KeyPressEvent.Source && keySource2 != e.KeyPressEvent.Source && keySource3 != e.KeyPressEvent.Source && keySource4 != e.KeyPressEvent.Source)
+                            //    {
+
+                            //        if (keySource1 != e.KeyPressEvent.Source && keySource2 != e.KeyPressEvent.Source && keySource3 != e.KeyPressEvent.Source && keySource4 != e.KeyPressEvent.Source && keySource6 != e.KeyPressEvent.Source)
+                            //        {
+                            //            keySource5 = e.KeyPressEvent.Source;
+                            //        }
+                            //    }
+                            //} else if (keySource6 == "" || keySource6 == e.KeyPressEvent.Source)
+                            //{
+                            //    if (keySource1 != e.KeyPressEvent.Source && keySource2 != e.KeyPressEvent.Source && keySource3 != e.KeyPressEvent.Source && keySource4 != e.KeyPressEvent.Source && keySource5 != e.KeyPressEvent.Source)
+                            //    {
+
+                            //        if (keySource1 != e.KeyPressEvent.Source && keySource2 != e.KeyPressEvent.Source && keySource3 != e.KeyPressEvent.Source && keySource4 != e.KeyPressEvent.Source && keySource5 != e.KeyPressEvent.Source)
+                            //        {
+                            //            keySource5 = e.KeyPressEvent.Source;
+                            //        }
+                            //    }
+                            //}
 
                             if (e.KeyPressEvent.Source== keySource1)
                             {
@@ -236,14 +256,14 @@ namespace SIP
                             {
                                 keyData4 += e.KeyPressEvent.VKeyName;
                             }
-                            else if (e.KeyPressEvent.Source == keySource5)
-                            {
-                                keyData5 += e.KeyPressEvent.VKeyName;
-                            }
-                            else if (e.KeyPressEvent.Source == keySource6)
-                            {
-                                keyData6 += e.KeyPressEvent.VKeyName;
-                            }
+                            //else if (e.KeyPressEvent.Source == keySource5)
+                            //{
+                            //    keyData5 += e.KeyPressEvent.VKeyName;
+                            //}
+                            //else if (e.KeyPressEvent.Source == keySource6)
+                            //{
+                            //    keyData6 += e.KeyPressEvent.VKeyName;
+                            //}
                         }
                         
 
@@ -288,24 +308,24 @@ namespace SIP
                                     keySource4 = string.Empty;
                                 }
                             }
-                            else if (e.KeyPressEvent.Source == keySource5)
-                            {
-                                if (keyData5.Length > 0)
-                                {
-                                    clokck_in_5(5, keyData5, "Mesin Absen 5");
-                                    keyData5 = string.Empty;
-                                    keySource5 = string.Empty;
-                                }
-                            }
-                            else if (e.KeyPressEvent.Source == keySource6)
-                            {
-                                if (keyData6.Length > 0)
-                                {
-                                    clokck_in_6(6, keyData6, "Mesin Absen 6");
-                                    keyData6 = string.Empty;
-                                    keySource6 = string.Empty;
-                                }
-                            }
+                            //else if (e.KeyPressEvent.Source == keySource5)
+                            //{
+                            //    if (keyData5.Length > 0)
+                            //    {
+                            //        clokck_in_5(5, keyData5, "Mesin Absen 5");
+                            //        keyData5 = string.Empty;
+                            //        keySource5 = string.Empty;
+                            //    }
+                            //}
+                            //else if (e.KeyPressEvent.Source == keySource6)
+                            //{
+                            //    if (keyData6.Length > 0)
+                            //    {
+                            //        clokck_in_6(6, keyData6, "Mesin Absen 6");
+                            //        keyData6 = string.Empty;
+                            //        keySource6 = string.Empty;
+                            //    }
+                            //}
 
 
                         }
@@ -534,17 +554,17 @@ namespace SIP
             if (r.HasRows)
             {
                 r.Read();
-                gbr5.Image = Properties.Resources.YES;
-                    ClockIn5.Text = "Clock In : " + DateTime.Now.ToString("HH:mm");
-                    Name5.Text = "Name : " + r[0];
-                //MessageBox.Show(Name1.Text);
+                //gbr5.Image = Properties.Resources.YES;
+                //    ClockIn5.Text = "Clock In : " + DateTime.Now.ToString("HH:mm");
+                //    Name5.Text = "Name : " + r[0];
+                ////MessageBox.Show(Name1.Text);
 
-                Task.Delay(1000).Wait();
-                ClockIn5.Refresh(); Name5.Refresh(); gbr5.Refresh();
+                //Task.Delay(1000).Wait();
+                //ClockIn5.Refresh(); Name5.Refresh(); gbr5.Refresh();
 
-                    gbr5.Image = Properties.Resources.NO;
-                    ClockIn5.Text = "Clock In";
-                    Name5.Text = "Name";
+                //    gbr5.Image = Properties.Resources.NO;
+                //    ClockIn5.Text = "Clock In";
+                //    Name5.Text = "Name";
 
                 r.Close();
             }
@@ -574,17 +594,17 @@ namespace SIP
             if (r.HasRows)
             {
                 r.Read();
-                gbr6.Image = Properties.Resources.YES;
-                    ClockIn6.Text = "Clock In : " + DateTime.Now.ToString("HH:mm");
-                    Name6.Text = "Name : " + r[0];
-                //MessageBox.Show(Name1.Text);
+                //gbr6.Image = Properties.Resources.YES;
+                //    ClockIn6.Text = "Clock In : " + DateTime.Now.ToString("HH:mm");
+                //    Name6.Text = "Name : " + r[0];
+                ////MessageBox.Show(Name1.Text);
 
-                Task.Delay(1000).Wait();
-                ClockIn6.Refresh(); Name6.Refresh(); gbr6.Refresh();
+                //Task.Delay(1000).Wait();
+                //ClockIn6.Refresh(); Name6.Refresh(); gbr6.Refresh();
 
-                    gbr6.Image = Properties.Resources.NO;
-                    ClockIn6.Text = "Clock In";
-                    Name6.Text = "Name";
+                //    gbr6.Image = Properties.Resources.NO;
+                //    ClockIn6.Text = "Clock In";
+                //    Name6.Text = "Name";
 
                 r.Close();
             }
@@ -631,7 +651,36 @@ namespace SIP
             string sqlselect = "SELECT sekolah_id, nama_sekolah, alamat FROM sekolah";
             dbcmd_select.CommandText = sqlselect;
 
-            string cek_jammulai = "SELECT * FROM waktu_absen";
+            //tambahan hari
+            int date_day = (int)System.DateTime.Now.DayOfWeek;
+            string hari = date_day.ToString();
+            switch (hari)
+            {
+                case "1":
+                    hari = "2";
+                    break;
+                case "2":
+                    hari = "3";
+                    break;
+                case "3":
+                    hari = "4";
+                    break;
+                case "4":
+                    hari = "5";
+                    break;
+                case "5":
+                    hari = "6";
+                    break;
+                case "6":
+                    hari = "7";
+                    break;
+                default:
+                    hari = "1";
+                    break;
+            }
+            string ab_mesin = noMesin.Substring(noMesin.Length - 1, 1);
+
+            string cek_jammulai = "SELECT * FROM waktu_absen WHERE hari='" + hari + "'";
             dbcmd_select.CommandText = cek_jammulai;
 
             conn.Open();
@@ -657,9 +706,29 @@ namespace SIP
                 if (get_masuk.TimeOfDay.Ticks < mulai_masuk.TimeOfDay.Ticks)
                 {
                     //MessageBox.Show("Belum waktunya absen bro");
-                    gbr1.Image = Properties.Resources.NO;
-                    ClockIn1.Text = "Clock In";
-                    Name1.Text = "Belum waktunya absen bro";
+                    switch (ab_mesin)
+                    {
+                        case "1":
+                            gbr1.Image = Properties.Resources.TRY;
+                            ClockIn1.Text = "Clock In";
+                            Name1.Text = "Belum waktunya absen ";
+                            break;
+                        case "2":
+                            gbr2.Image = Properties.Resources.TRY;
+                            ClockIn2.Text = "Clock In";
+                            Name1.Text = "Belum waktunya absen ";
+                            break;
+                        case "3":
+                            gbr3.Image = Properties.Resources.TRY;
+                            ClockIn3.Text = "Clock In";
+                            Name1.Text = "Belum waktunya absen ";
+                            break;
+                        default:
+                            gbr4.Image = Properties.Resources.TRY;
+                            ClockIn4.Text = "Clock In";
+                            Name1.Text = "Belum waktunya absen ";
+                            break;
+                    }
                 }
                 else
                 {
@@ -668,9 +737,29 @@ namespace SIP
                     if (get_masuk.TimeOfDay.Ticks > mulai_selesai.TimeOfDay.Ticks && get_pulang_masuk.TimeOfDay.Ticks < pulang_masuk.TimeOfDay.Ticks)
                     {
                         //MessageBox.Show("Maaf, anda sudah terlambat absen");
-                        gbr1.Image = Properties.Resources.NO;
-                        ClockIn1.Text = "Clock In";
-                        Name1.Text = "Terlambat absen masuk";
+                        switch (ab_mesin)
+                        {
+                            case "1":
+                                gbr1.Image = Properties.Resources.TRY;
+                                ClockIn1.Text = "Clock In";
+                                Name1.Text = "Terlambat absen masuk";
+                                break;
+                            case "2":
+                                gbr2.Image = Properties.Resources.TRY;
+                                ClockIn2.Text = "Clock In";
+                                Name2.Text = "Terlambat absen masuk";
+                                break;
+                            case "3":
+                                gbr3.Image = Properties.Resources.TRY;
+                                ClockIn3.Text = "Clock In";
+                                Name3.Text = "Terlambat absen masuk";
+                                break;
+                            default:
+                                gbr4.Image = Properties.Resources.TRY;
+                                ClockIn4.Text = "Clock In";
+                                Name4.Text = "Terlambat absen masuk";
+                                break;
+                        }
                     }
                     else
                     {
@@ -684,42 +773,128 @@ namespace SIP
                         conn.Close();
                         if (count == 0)
                         {
-                    
-                            conn.Open();
-                            dbcmd_count.CommandText = ceksiswa;
-                            Int32 countsiswa = Convert.ToInt32(dbcmd_count.ExecuteScalar()); //proses menghitung jumlah data(count)
-                            conn.Close();
-
-                            if (countsiswa==0)
+                            if (get_masuk.TimeOfDay.Ticks > mulai_masuk.TimeOfDay.Ticks && get_masuk.TimeOfDay.Ticks < mulai_selesai.TimeOfDay.Ticks)
                             {
-                                gbr1.Image = Properties.Resources.NO;
-                                ClockIn1.Text = "Clock In";
-                                Name1.Text = "Siswa tidak ditemukan";
-                                //MessageBox.Show("Maaf, data siswa tidak ditemukan!");
+                                conn.Open();
+                                dbcmd_count.CommandText = ceksiswa;
+                                Int32 countsiswa = Convert.ToInt32(dbcmd_count.ExecuteScalar()); //proses menghitung jumlah data(count)
+                                conn.Close();
+
+                                if (countsiswa==0)
+                                {
+                                    switch (ab_mesin)
+                                    {
+                                        case "1":
+                                            gbr1.Image = Properties.Resources.TRY;
+                                            ClockIn1.Text = "Clock In";
+                                            Name1.Text = "Siswa tidak ditemukan";
+                                            break;
+                                        case "2":
+                                            gbr2.Image = Properties.Resources.TRY;
+                                            ClockIn2.Text = "Clock In";
+                                            Name2.Text = "Siswa tidak ditemukan";
+                                            break;
+                                        case "3":
+                                            gbr3.Image = Properties.Resources.TRY;
+                                            ClockIn3.Text = "Clock In";
+                                            Name3.Text = "Siswa tidak ditemukan";
+                                            break;
+                                        default:
+                                            gbr4.Image = Properties.Resources.TRY;
+                                            ClockIn4.Text = "Clock In";
+                                            Name4.Text = "Siswa tidak ditemukan";
+                                            break;
+                                    }
+                                    //MessageBox.Show("Maaf, data siswa tidak ditemukan!");
+                                }
+                                else
+                                {
+                                    string sqlcekabsen = "SELECT absen_masuk FROM absen WHERE absen_nomor_kartu='" + absenkartuid + "' AND absen_sekolah_id='" + absensekolahid + "' AND absen_tanggal='" + tanggalabsen + "'";
+                                    dbcmd_select.CommandText = sqlcekabsen;
+                                    conn.Open();
+                                    MySqlDataReader rdr = dbcmd_select.ExecuteReader();
+                                    string absen_masuk = "";
+                                    while (rdr.Read())
+                                    {
+                                        absen_masuk = rdr.GetValue(0).ToString();
+                                    }
+                                    conn.Close();
+                                    if (absen_masuk != null || absen_masuk != "")
+                                    {
+                                        string sqlinsert = "insert into absen(absen_nomor_kartu, absen_sekolah_id, absen_status, absen_device, absen_tanggal, InsertAt, absen_masuk ) " +
+                                        "values('" + absenkartuid + "','" + absensekolahid + "','" + "PENDING" + "','" + noMesin + "','" + tanggalabsen + "','" + insertat + "','" + jammasuk + "');";
+                                        dbcmd_insert.CommandText = sqlinsert;
+
+                                        try
+                                        {
+                                            MySqlDataReader MyReader1 = null;
+                                            conn.Open();
+                                            MyReader1 = dbcmd_insert.ExecuteReader();     // Here our query will be executed and data saved into the database.  
+                                            conn.Close();
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            MessageBox.Show(ex.Message);
+                                        }
+                                        msg = true;
+                                    }
+                                    else
+                                    {
+                                        switch (ab_mesin)
+                                        {
+                                            case "1":
+                                                gbr1.Image = Properties.Resources.TRY;
+                                                ClockIn1.Text = "Clock In";
+                                                Name1.Text = "Siswa sudah melakukan absen masuk";
+                                                break;
+                                            case "2":
+                                                gbr2.Image = Properties.Resources.TRY;
+                                                ClockIn2.Text = "Clock In";
+                                                Name2.Text = "Siswa sudah melakukan absen masuk";
+                                                break;
+                                            case "3":
+                                                gbr3.Image = Properties.Resources.TRY;
+                                                ClockIn3.Text = "Clock In";
+                                                Name3.Text = "Siswa sudah melakukan absen masuk";
+                                                break;
+                                            default:
+                                                gbr4.Image = Properties.Resources.TRY;
+                                                ClockIn4.Text = "Clock In";
+                                                Name4.Text = "Siswa sudah melakukan absen masuk";
+                                                break;
+                                        }
+                                    }
+                                }
                             }
                             else
                             {
-                                string sqlinsert = "insert into absen(absen_nomor_kartu, absen_sekolah_id, absen_status, absen_device, absen_tanggal, InsertAt, absen_masuk ) " +
-                                "values('" + absenkartuid + "','" + absensekolahid + "','" + "PENDING" + "','" + noMesin + "','" + tanggalabsen + "','" + insertat + "','" + jammasuk + "');";
-                                dbcmd_insert.CommandText = sqlinsert;
-
-                                try
+                                switch (ab_mesin)
                                 {
-                                    MySqlDataReader MyReader1 = null;
-                                    conn.Open();
-                                    MyReader1 = dbcmd_insert.ExecuteReader();     // Here our query will be executed and data saved into the database.  
-                                    conn.Close();
+                                    case "1":
+                                        gbr1.Image = Properties.Resources.TRY;
+                                        ClockIn1.Text = "Clock In";
+                                        Name1.Text = "Terlambat absen masuk";
+                                        break;
+                                    case "2":
+                                        gbr2.Image = Properties.Resources.TRY;
+                                        ClockIn2.Text = "Clock In";
+                                        Name2.Text = "Terlambat absen masuk";
+                                        break;
+                                    case "3":
+                                        gbr3.Image = Properties.Resources.TRY;
+                                        ClockIn3.Text = "Clock In";
+                                        Name3.Text = "Terlambat absen masuk";
+                                        break;
+                                    default:
+                                        gbr4.Image = Properties.Resources.TRY;
+                                        ClockIn4.Text = "Clock In";
+                                        Name4.Text = "Terlambat absen masuk";
+                                        break;
                                 }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message);
-                                }
-                                msg = true;
                             }
 
 
 
-                            
                         }
                         else
                         {
@@ -730,22 +905,75 @@ namespace SIP
                             if (get_pulang_masuk.TimeOfDay.Ticks < pulang_masuk.TimeOfDay.Ticks)
                             {
                                 //MessageBox.Show("Maaf, anda sudah melakukan absen");
-                                gbr1.Image = Properties.Resources.NO;
-                                ClockIn1.Text = "Clock In";
-                                Name1.Text = "Sudah absen";
+                                switch (ab_mesin)
+                                {
+                                    case "1":
+                                        gbr1.Image = Properties.Resources.TRY;
+                                        ClockIn1.Text = "Clock In";
+                                        Name1.Text = "Belum waktunya absen pulang";
+                                        break;
+                                    case "2":
+                                        gbr2.Image = Properties.Resources.TRY;
+                                        ClockIn2.Text = "Clock In";
+                                        Name2.Text = "Belum waktunya absen pulang";
+                                        break;
+                                    case "3":
+                                        gbr3.Image = Properties.Resources.TRY;
+                                        ClockIn3.Text = "Clock In";
+                                        Name3.Text = "Belum waktunya absen pulang";
+                                        break;
+                                    default:
+                                        gbr4.Image = Properties.Resources.TRY;
+                                        ClockIn4.Text = "Clock In";
+                                        Name4.Text = "Belum waktunya absen pulang";
+                                        break;
+                                }
                             }
                             else if(get_pulang_masuk.TimeOfDay.Ticks > pulang_selesai.TimeOfDay.Ticks)
                             {
                                 //MessageBox.Show("Maaf, anda sudah terlambat untuk absen pulang");
-                                gbr1.Image = Properties.Resources.NO;
-                                ClockIn1.Text = "Clock In";
-                                Name1.Text = "Terlambat absen pulang";
+                                switch (ab_mesin)
+                                {
+                                    case "1":
+                                        gbr1.Image = Properties.Resources.TRY;
+                                        ClockIn1.Text = "Clock In";
+                                        Name1.Text = "Terlambat absen pulang";
+                                        break;
+                                    case "2":
+                                        gbr2.Image = Properties.Resources.TRY;
+                                        ClockIn2.Text = "Clock In";
+                                        Name2.Text = "Terlambat absen pulang";
+                                        break;
+                                    case "3":
+                                        gbr3.Image = Properties.Resources.TRY;
+                                        ClockIn3.Text = "Clock In";
+                                        Name3.Text = "Terlambat absen pulang";
+                                        break;
+                                    default:
+                                        gbr4.Image = Properties.Resources.TRY;
+                                        ClockIn4.Text = "Clock In";
+                                        Name4.Text = "Terlambat absen pulang";
+                                        break;
+                                }
                             }
                             else
                             {
-                               
+
                                 MySqlCommand dbcmd_update = conn.CreateCommand();
                                 //MessageBox.Show("man");
+                                //string sqlcekabsen = "SELECT absen_keluar FROM absen WHERE absen_nomor_kartu='" + absenkartuid + "' AND absen_sekolah_id='" + absensekolahid + "' AND absen_tanggal='" + tanggalabsen + "';";
+                                //dbcmd_update.CommandText = sqlcekabsen;
+                                //conn.Open();
+                                //MySqlDataReader rdr = dbcmd_update.ExecuteReader();
+                                //string absen_keluar = "";
+                                //while (rdr.Read())
+                                //{
+                                //    absen_keluar = rdr.GetValue(0).ToString();
+                                //}
+                                //conn.Close();
+                                //if (absen_keluar == null || absen_keluar == "")
+                                //{   
+                                    //MessageBox.Show("man");
                                     string sqlup = "update absen SET absen_keluar = '" + jammasuk + "', upload_keluar ='0' where absen_nomor_kartu ='" + absenkartuid + "' and absen_tanggal = '" + tanggalabsen + "';";
                                     dbcmd_update.CommandText = sqlup;
                                     try 
@@ -761,6 +989,13 @@ namespace SIP
                                     {
                                         //MessageBox.Show(ex.Message);
                                     }
+                                //}
+                                //else
+                                //{
+                                //    gbr1.Image = Properties.Resources.NO;
+                                //    ClockIn1.Text = "Clock In";
+                                //    Name1.Text = "Sudah absen pulang";
+                                //}
                                 /*
                                 }
                                 else
@@ -990,6 +1225,7 @@ namespace SIP
 
             return string.Format(_koneksi, server, database, user, password);
         }
+
         private void tsHelpSQL_Click(object sender, EventArgs e)
         {
             try
@@ -1103,6 +1339,72 @@ namespace SIP
                 i++;
             }
             conn.Close();
+        }
+
+        private void runningTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UnLoggerUSB();
+            FormRunningText frm = new SIP.FormRunningText(this);
+            frm.ShowDialog();
+        }
+
+        private void RunRunningText()
+        {
+            string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";SslMode=" + ssl + ";";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlCommand dbcmd = conn.CreateCommand();
+
+            string sqlselect = "SELECT * FROM running_text ;";
+            dbcmd.CommandText = sqlselect;
+
+            var dt = new DataTable("running_text");
+            conn.Open();
+            var r = dbcmd.ExecuteReader();
+            dt.Load(r);
+            string brs;
+            bCL_RunningText.Text = "";
+            foreach (DataRow baris in dt.Rows)
+            {
+                brs = baris["text"].ToString();
+                bCL_RunningText.Text = bCL_RunningText.Text + " | " + brs + "";
+            }
+            xpos = bCL_RunningText.Location.X;
+            ypos = bCL_RunningText.Location.Y;
+            mode = "Right-to-Left";
+            timerRunningText.Start();
+        }
+
+        private void timerRunningText_Tick(object sender, EventArgs e)
+        {
+            //if (xpos == 0)
+
+            //{
+
+            //    this.bCL_RunningText.Location = new System.Drawing.Point(this.Width, ypos);
+
+            //    xpos = this.Width;
+
+            //}
+
+            //else
+
+            //{
+
+            //    this.bCL_RunningText.Location = new System.Drawing.Point(xpos, ypos);
+
+            //    xpos -= 2;
+
+            //}
+            this.bCL_RunningText.Location = new Point(bCL_RunningText.Location.X - 3, bCL_RunningText.Location.Y);
+            if (bCL_RunningText.Location.X < (0 - bCL_RunningText.Width))
+            {
+                bCL_RunningText.Location = new Point(this.Width, bCL_RunningText.Location.Y);
+            }
+        }
+
+        public void RefreshRunningText()
+        {
+            RunRunningText();
         }
 
 

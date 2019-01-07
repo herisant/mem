@@ -58,3 +58,70 @@ C:\Users\damar\Documents\Visual Studio 2017\READER\SIP\bin\Debug\SIP.exe.config
 C:\Users\damar\Documents\Visual Studio 2017\READER\SIP\bin\Debug\SIP.exe
 C:\Users\damar\Documents\Visual Studio 2017\READER\SIP\bin\Debug\SIP.pdb
 C:\Users\damar\Documents\Visual Studio 2017\READER\SIP\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\bin\Debug\SIP.exe.config
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\bin\Debug\SIP.exe
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\bin\Debug\SIP.pdb
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.exe.config
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.csproj.ResolveComReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormCreate.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormDevice.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormDownload.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormLoading.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormSetAbsen.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormSekolah.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormSettings.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormSIP.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormUpload.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.FormWebService.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.Properties.Resources.resources
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.csproj.GenerateResource.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.exe
+C:\Users\damar\Documents\Visual Studio 2017\READERMANDIRI\SIP\obj\Debug\SIP.pdb
+C:\Users\damar\Documents\Mandiri\READER\SIP\bin\Debug\SIP.exe.config
+C:\Users\damar\Documents\Mandiri\READER\SIP\bin\Debug\SIP.exe
+C:\Users\damar\Documents\Mandiri\READER\SIP\bin\Debug\SIP.pdb
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.exe.config
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.csproj.ResolveComReference.cache
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormCreate.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormDevice.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormDownload.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormLoading.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormSetAbsen.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormSekolah.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormSettings.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormSIP.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormUpload.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.FormWebService.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.Properties.Resources.resources
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.csproj.GenerateResource.cache
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.exe
+C:\Users\damar\Documents\Mandiri\READER\SIP\obj\Debug\SIP.pdb
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\bin\Debug\SIP.exe.config
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\bin\Debug\SIP.exe
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\bin\Debug\SIP.pdb
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.exe.config
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.csproj.ResolveComReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormCreate.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormDevice.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormDownload.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormLoading.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormSetAbsen.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormSekolah.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormSettings.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormSIP.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormUpload.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormWebService.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.Properties.Resources.resources
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.csproj.GenerateResource.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.exe
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.pdb
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\SIP\obj\Debug\SIP.FormRunningText.resources

@@ -44,31 +44,13 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSekolah = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsDatabase = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsInstall = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsCreate = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsHelpSQL = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsTutorial = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsSIP = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsWebservice = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimaze = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.header2 = new System.Windows.Forms.Panel();
+            this.bCL_RunningText = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.gbr5 = new System.Windows.Forms.PictureBox();
-            this.ClockIn5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Name5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.gbr3 = new System.Windows.Forms.PictureBox();
             this.ClockIn3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -80,11 +62,6 @@
             this.Name1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.gbr6 = new System.Windows.Forms.PictureBox();
-            this.ClockIn6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Name6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gbr4 = new System.Windows.Forms.PictureBox();
             this.ClockIn4 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -109,21 +86,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.timerRefresh = new System.Windows.Forms.Timer(this.components);
+            this.timerRunningText = new System.Windows.Forms.Timer(this.components);
+            this.runningTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.header.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimaze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            this.header2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gbr5)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbr3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbr1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gbr6)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbr4)).BeginInit();
             this.panel3.SuspendLayout();
@@ -146,7 +122,6 @@
             this.header.Controls.Add(this.dateTimePicker1);
             this.header.Controls.Add(this.toolStrip1);
             this.header.Controls.Add(this.panel1);
-            this.header.Controls.Add(this.bunifuCustomLabel1);
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
@@ -155,10 +130,11 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(343, 17);
+            this.dateTimePicker1.Location = new System.Drawing.Point(367, 10);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(8, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(136, 20);
             this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.Visible = false;
             // 
             // toolStrip1
             // 
@@ -170,7 +146,7 @@
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(54, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(23, 33);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
@@ -185,11 +161,7 @@
             this.toolStripMenuItem2,
             this.tsSekolah,
             this.toolStripMenuItem3,
-            this.tsDatabase,
-            this.toolStripMenuItem4,
-            this.tsSIP,
-            this.toolStripMenuItem5,
-            this.tsWebservice});
+            this.runningTextToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -243,122 +215,6 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(239, 6);
             // 
-            // tsDatabase
-            // 
-            this.tsDatabase.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsInstall,
-            this.toolStripMenuItem6,
-            this.tsSettings,
-            this.toolStripMenuItem7,
-            this.tsCreate,
-            this.toolStripMenuItem8,
-            this.tsHelpSQL,
-            this.toolStripMenuItem9,
-            this.tsTutorial});
-            this.tsDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.tsDatabase.Image = ((System.Drawing.Image)(resources.GetObject("tsDatabase.Image")));
-            this.tsDatabase.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsDatabase.Name = "tsDatabase";
-            this.tsDatabase.Size = new System.Drawing.Size(242, 30);
-            this.tsDatabase.Text = "Database";
-            // 
-            // tsInstall
-            // 
-            this.tsInstall.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsInstall.Image = ((System.Drawing.Image)(resources.GetObject("tsInstall.Image")));
-            this.tsInstall.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsInstall.Name = "tsInstall";
-            this.tsInstall.Size = new System.Drawing.Size(195, 30);
-            this.tsInstall.Text = "Instal Database";
-            this.tsInstall.Click += new System.EventHandler(this.tsInstall_Click);
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(192, 6);
-            // 
-            // tsSettings
-            // 
-            this.tsSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsSettings.Image = ((System.Drawing.Image)(resources.GetObject("tsSettings.Image")));
-            this.tsSettings.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsSettings.Name = "tsSettings";
-            this.tsSettings.Size = new System.Drawing.Size(195, 30);
-            this.tsSettings.Text = "Settings Database";
-            this.tsSettings.Click += new System.EventHandler(this.tsSettings_Click);
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(192, 6);
-            // 
-            // tsCreate
-            // 
-            this.tsCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsCreate.Image = ((System.Drawing.Image)(resources.GetObject("tsCreate.Image")));
-            this.tsCreate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsCreate.Name = "tsCreate";
-            this.tsCreate.Size = new System.Drawing.Size(195, 30);
-            this.tsCreate.Text = "Create Database";
-            this.tsCreate.Click += new System.EventHandler(this.tsCreate_Click_1);
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(192, 6);
-            // 
-            // tsHelpSQL
-            // 
-            this.tsHelpSQL.Image = ((System.Drawing.Image)(resources.GetObject("tsHelpSQL.Image")));
-            this.tsHelpSQL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsHelpSQL.Name = "tsHelpSQL";
-            this.tsHelpSQL.Size = new System.Drawing.Size(195, 30);
-            this.tsHelpSQL.Text = "Help - Install SQL";
-            this.tsHelpSQL.Click += new System.EventHandler(this.tsHelpSQL_Click);
-            // 
-            // toolStripMenuItem9
-            // 
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(192, 6);
-            // 
-            // tsTutorial
-            // 
-            this.tsTutorial.Image = ((System.Drawing.Image)(resources.GetObject("tsTutorial.Image")));
-            this.tsTutorial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsTutorial.Name = "tsTutorial";
-            this.tsTutorial.Size = new System.Drawing.Size(195, 30);
-            this.tsTutorial.Text = "Help - Tutorial SIP";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(239, 6);
-            // 
-            // tsSIP
-            // 
-            this.tsSIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.tsSIP.Image = ((System.Drawing.Image)(resources.GetObject("tsSIP.Image")));
-            this.tsSIP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsSIP.Name = "tsSIP";
-            this.tsSIP.Size = new System.Drawing.Size(242, 30);
-            this.tsSIP.Text = "Host SIP";
-            this.tsSIP.Click += new System.EventHandler(this.tsSIP_Click);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(239, 6);
-            // 
-            // tsWebservice
-            // 
-            this.tsWebservice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.tsWebservice.Image = ((System.Drawing.Image)(resources.GetObject("tsWebservice.Image")));
-            this.tsWebservice.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsWebservice.Name = "tsWebservice";
-            this.tsWebservice.Size = new System.Drawing.Size(242, 30);
-            this.tsWebservice.Text = "Settings url";
-            this.tsWebservice.Click += new System.EventHandler(this.tsWebservice_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnMinimaze);
@@ -397,16 +253,26 @@
             this.btnExit.Zoom = 10;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // bunifuCustomLabel1
+            // header2
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(29, 5);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(32, 21);
-            this.bunifuCustomLabel1.TabIndex = 2;
-            this.bunifuCustomLabel1.Text = "SIP";
+            this.header2.BackColor = System.Drawing.Color.Black;
+            this.header2.Controls.Add(this.bCL_RunningText);
+            this.header2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.header2.Location = new System.Drawing.Point(0, 522);
+            this.header2.Name = "header2";
+            this.header2.Size = new System.Drawing.Size(1100, 77);
+            this.header2.TabIndex = 3;
+            // 
+            // bCL_RunningText
+            // 
+            this.bCL_RunningText.AutoSize = true;
+            this.bCL_RunningText.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCL_RunningText.ForeColor = System.Drawing.SystemColors.Control;
+            this.bCL_RunningText.Location = new System.Drawing.Point(12, 22);
+            this.bCL_RunningText.Name = "bCL_RunningText";
+            this.bCL_RunningText.Size = new System.Drawing.Size(171, 29);
+            this.bCL_RunningText.TabIndex = 0;
+            this.bCL_RunningText.Text = "RunningText";
             // 
             // timer1
             // 
@@ -417,76 +283,17 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 33);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(253, 566);
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(253, 489);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.gbr5);
-            this.panel6.Controls.Add(this.ClockIn5);
-            this.panel6.Controls.Add(this.Name5);
-            this.panel6.Controls.Add(this.bunifuCustomLabel7);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 379);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(247, 184);
-            this.panel6.TabIndex = 2;
-            // 
-            // gbr5
-            // 
-            this.gbr5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbr5.Image = global::SIP.Properties.Resources.NO;
-            this.gbr5.Location = new System.Drawing.Point(0, 31);
-            this.gbr5.Name = "gbr5";
-            this.gbr5.Size = new System.Drawing.Size(247, 89);
-            this.gbr5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gbr5.TabIndex = 6;
-            this.gbr5.TabStop = false;
-            // 
-            // ClockIn5
-            // 
-            this.ClockIn5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ClockIn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClockIn5.Location = new System.Drawing.Point(0, 120);
-            this.ClockIn5.Name = "ClockIn5";
-            this.ClockIn5.Size = new System.Drawing.Size(247, 32);
-            this.ClockIn5.TabIndex = 5;
-            this.ClockIn5.Text = "Clock In";
-            this.ClockIn5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Name5
-            // 
-            this.Name5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Name5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name5.Location = new System.Drawing.Point(0, 152);
-            this.Name5.Name = "Name5";
-            this.Name5.Size = new System.Drawing.Size(247, 32);
-            this.Name5.TabIndex = 4;
-            this.Name5.Text = "Name";
-            this.Name5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuCustomLabel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(247, 31);
-            this.bunifuCustomLabel7.TabIndex = 1;
-            this.bunifuCustomLabel7.Text = "ABSEN 5";
-            this.bunifuCustomLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -495,9 +302,9 @@
             this.panel5.Controls.Add(this.Name3);
             this.panel5.Controls.Add(this.bunifuCustomLabel5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 191);
+            this.panel5.Location = new System.Drawing.Point(3, 247);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(247, 182);
+            this.panel5.Size = new System.Drawing.Size(247, 239);
             this.panel5.TabIndex = 1;
             // 
             // gbr3
@@ -506,7 +313,7 @@
             this.gbr3.Image = global::SIP.Properties.Resources.NO;
             this.gbr3.Location = new System.Drawing.Point(0, 31);
             this.gbr3.Name = "gbr3";
-            this.gbr3.Size = new System.Drawing.Size(247, 87);
+            this.gbr3.Size = new System.Drawing.Size(247, 112);
             this.gbr3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gbr3.TabIndex = 6;
             this.gbr3.TabStop = false;
@@ -515,7 +322,7 @@
             // 
             this.ClockIn3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ClockIn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClockIn3.Location = new System.Drawing.Point(0, 118);
+            this.ClockIn3.Location = new System.Drawing.Point(0, 143);
             this.ClockIn3.Name = "ClockIn3";
             this.ClockIn3.Size = new System.Drawing.Size(247, 32);
             this.ClockIn3.TabIndex = 5;
@@ -526,9 +333,9 @@
             // 
             this.Name3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Name3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name3.Location = new System.Drawing.Point(0, 150);
+            this.Name3.Location = new System.Drawing.Point(0, 175);
             this.Name3.Name = "Name3";
-            this.Name3.Size = new System.Drawing.Size(247, 32);
+            this.Name3.Size = new System.Drawing.Size(247, 64);
             this.Name3.TabIndex = 4;
             this.Name3.Text = "Name";
             this.Name3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -555,7 +362,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(247, 182);
+            this.panel2.Size = new System.Drawing.Size(247, 238);
             this.panel2.TabIndex = 0;
             // 
             // gbr1
@@ -564,7 +371,7 @@
             this.gbr1.Image = global::SIP.Properties.Resources.NO;
             this.gbr1.Location = new System.Drawing.Point(0, 31);
             this.gbr1.Name = "gbr1";
-            this.gbr1.Size = new System.Drawing.Size(247, 87);
+            this.gbr1.Size = new System.Drawing.Size(247, 111);
             this.gbr1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gbr1.TabIndex = 3;
             this.gbr1.TabStop = false;
@@ -573,7 +380,7 @@
             // 
             this.ClockIn1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ClockIn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClockIn1.Location = new System.Drawing.Point(0, 118);
+            this.ClockIn1.Location = new System.Drawing.Point(0, 142);
             this.ClockIn1.Name = "ClockIn1";
             this.ClockIn1.Size = new System.Drawing.Size(247, 32);
             this.ClockIn1.TabIndex = 2;
@@ -584,9 +391,9 @@
             // 
             this.Name1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name1.Location = new System.Drawing.Point(0, 150);
+            this.Name1.Location = new System.Drawing.Point(0, 174);
             this.Name1.Name = "Name1";
-            this.Name1.Size = new System.Drawing.Size(247, 32);
+            this.Name1.Size = new System.Drawing.Size(247, 64);
             this.Name1.TabIndex = 1;
             this.Name1.Text = "Name";
             this.Name1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -608,76 +415,17 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.panel7, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(253, 33);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(253, 566);
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(253, 489);
             this.tableLayoutPanel2.TabIndex = 5;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.gbr6);
-            this.panel7.Controls.Add(this.ClockIn6);
-            this.panel7.Controls.Add(this.Name6);
-            this.panel7.Controls.Add(this.bunifuCustomLabel6);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 379);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(247, 184);
-            this.panel7.TabIndex = 2;
-            // 
-            // gbr6
-            // 
-            this.gbr6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbr6.Image = global::SIP.Properties.Resources.NO;
-            this.gbr6.Location = new System.Drawing.Point(0, 31);
-            this.gbr6.Name = "gbr6";
-            this.gbr6.Size = new System.Drawing.Size(247, 89);
-            this.gbr6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gbr6.TabIndex = 6;
-            this.gbr6.TabStop = false;
-            // 
-            // ClockIn6
-            // 
-            this.ClockIn6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ClockIn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClockIn6.Location = new System.Drawing.Point(0, 120);
-            this.ClockIn6.Name = "ClockIn6";
-            this.ClockIn6.Size = new System.Drawing.Size(247, 32);
-            this.ClockIn6.TabIndex = 5;
-            this.ClockIn6.Text = "Clock In";
-            this.ClockIn6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Name6
-            // 
-            this.Name6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Name6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name6.Location = new System.Drawing.Point(0, 152);
-            this.Name6.Name = "Name6";
-            this.Name6.Size = new System.Drawing.Size(247, 32);
-            this.Name6.TabIndex = 4;
-            this.Name6.Text = "Name";
-            this.Name6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.bunifuCustomLabel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(247, 31);
-            this.bunifuCustomLabel6.TabIndex = 1;
-            this.bunifuCustomLabel6.Text = "ABSEN 6";
-            this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -686,9 +434,9 @@
             this.panel4.Controls.Add(this.Name4);
             this.panel4.Controls.Add(this.bunifuCustomLabel4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 191);
+            this.panel4.Location = new System.Drawing.Point(3, 247);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(247, 182);
+            this.panel4.Size = new System.Drawing.Size(247, 239);
             this.panel4.TabIndex = 1;
             // 
             // gbr4
@@ -697,7 +445,7 @@
             this.gbr4.Image = global::SIP.Properties.Resources.NO;
             this.gbr4.Location = new System.Drawing.Point(0, 31);
             this.gbr4.Name = "gbr4";
-            this.gbr4.Size = new System.Drawing.Size(247, 87);
+            this.gbr4.Size = new System.Drawing.Size(247, 112);
             this.gbr4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gbr4.TabIndex = 6;
             this.gbr4.TabStop = false;
@@ -706,7 +454,7 @@
             // 
             this.ClockIn4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ClockIn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClockIn4.Location = new System.Drawing.Point(0, 118);
+            this.ClockIn4.Location = new System.Drawing.Point(0, 143);
             this.ClockIn4.Name = "ClockIn4";
             this.ClockIn4.Size = new System.Drawing.Size(247, 32);
             this.ClockIn4.TabIndex = 5;
@@ -717,9 +465,9 @@
             // 
             this.Name4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Name4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name4.Location = new System.Drawing.Point(0, 150);
+            this.Name4.Location = new System.Drawing.Point(0, 175);
             this.Name4.Name = "Name4";
-            this.Name4.Size = new System.Drawing.Size(247, 32);
+            this.Name4.Size = new System.Drawing.Size(247, 64);
             this.Name4.TabIndex = 4;
             this.Name4.Text = "Name";
             this.Name4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -746,7 +494,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(247, 182);
+            this.panel3.Size = new System.Drawing.Size(247, 238);
             this.panel3.TabIndex = 0;
             // 
             // gbr2
@@ -755,7 +503,7 @@
             this.gbr2.Image = global::SIP.Properties.Resources.NO;
             this.gbr2.Location = new System.Drawing.Point(0, 31);
             this.gbr2.Name = "gbr2";
-            this.gbr2.Size = new System.Drawing.Size(247, 87);
+            this.gbr2.Size = new System.Drawing.Size(247, 111);
             this.gbr2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gbr2.TabIndex = 6;
             this.gbr2.TabStop = false;
@@ -764,7 +512,7 @@
             // 
             this.ClockIn2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ClockIn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClockIn2.Location = new System.Drawing.Point(0, 118);
+            this.ClockIn2.Location = new System.Drawing.Point(0, 142);
             this.ClockIn2.Name = "ClockIn2";
             this.ClockIn2.Size = new System.Drawing.Size(247, 32);
             this.ClockIn2.TabIndex = 5;
@@ -775,9 +523,9 @@
             // 
             this.Name2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Name2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name2.Location = new System.Drawing.Point(0, 150);
+            this.Name2.Location = new System.Drawing.Point(0, 174);
             this.Name2.Name = "Name2";
-            this.Name2.Size = new System.Drawing.Size(247, 32);
+            this.Name2.Size = new System.Drawing.Size(247, 64);
             this.Name2.TabIndex = 4;
             this.Name2.Text = "Name";
             this.Name2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -800,7 +548,7 @@
             this.labelJAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.labelJAM.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.labelJAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJAM.Location = new System.Drawing.Point(506, 528);
+            this.labelJAM.Location = new System.Drawing.Point(506, 451);
             this.labelJAM.Name = "labelJAM";
             this.labelJAM.Size = new System.Drawing.Size(594, 71);
             this.labelJAM.TabIndex = 6;
@@ -819,7 +567,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(594, 495);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(594, 418);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // panel8
@@ -829,7 +577,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(181, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(410, 489);
+            this.panel8.Size = new System.Drawing.Size(410, 412);
             this.panel8.TabIndex = 0;
             // 
             // dgv
@@ -857,7 +605,7 @@
             this.CLOCKOUT});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -875,7 +623,7 @@
             this.dgv.RowHeadersVisible = false;
             this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(410, 451);
+            this.dgv.Size = new System.Drawing.Size(410, 374);
             this.dgv.TabIndex = 1;
             // 
             // NO
@@ -936,24 +684,24 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(172, 489);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(172, 412);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 328);
+            this.panel10.Location = new System.Drawing.Point(3, 277);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(166, 158);
+            this.panel10.Size = new System.Drawing.Size(166, 132);
             this.panel10.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 166);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 140);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(166, 131);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -963,13 +711,26 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(166, 157);
+            this.panel9.Size = new System.Drawing.Size(166, 131);
             this.panel9.TabIndex = 0;
             // 
             // timerRefresh
             // 
             this.timerRefresh.Interval = 500;
             this.timerRefresh.Tick += new System.EventHandler(this.timerRefresh_Tick);
+            // 
+            // timerRunningText
+            // 
+            this.timerRunningText.Interval = 50;
+            this.timerRunningText.Tick += new System.EventHandler(this.timerRunningText_Tick);
+            // 
+            // runningTextToolStripMenuItem
+            // 
+            this.runningTextToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("runningTextToolStripMenuItem.Image")));
+            this.runningTextToolStripMenuItem.Name = "runningTextToolStripMenuItem";
+            this.runningTextToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
+            this.runningTextToolStripMenuItem.Text = "Running Text";
+            this.runningTextToolStripMenuItem.Click += new System.EventHandler(this.runningTextToolStripMenuItem_Click);
             // 
             // FormSIP
             // 
@@ -981,6 +742,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.header);
+            this.Controls.Add(this.header2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSIP";
@@ -996,16 +758,14 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimaze)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            this.header2.ResumeLayout(false);
+            this.header2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gbr5)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbr3)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbr1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gbr6)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbr4)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -1023,41 +783,31 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel header;
+        private System.Windows.Forms.Panel header2;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimaze;
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuCustomLabel labelJAM;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private System.Windows.Forms.PictureBox gbr1;
         private Bunifu.Framework.UI.BunifuCustomLabel ClockIn1;
         private Bunifu.Framework.UI.BunifuCustomLabel Name1;
-        private System.Windows.Forms.PictureBox gbr6;
-        private Bunifu.Framework.UI.BunifuCustomLabel ClockIn6;
-        private Bunifu.Framework.UI.BunifuCustomLabel Name6;
         private System.Windows.Forms.PictureBox gbr4;
         private Bunifu.Framework.UI.BunifuCustomLabel ClockIn4;
         private Bunifu.Framework.UI.BunifuCustomLabel Name4;
         private System.Windows.Forms.PictureBox gbr2;
         private Bunifu.Framework.UI.BunifuCustomLabel ClockIn2;
         private Bunifu.Framework.UI.BunifuCustomLabel Name2;
-        private System.Windows.Forms.PictureBox gbr5;
-        private Bunifu.Framework.UI.BunifuCustomLabel ClockIn5;
-        private Bunifu.Framework.UI.BunifuCustomLabel Name5;
         private System.Windows.Forms.PictureBox gbr3;
         private Bunifu.Framework.UI.BunifuCustomLabel ClockIn3;
         private Bunifu.Framework.UI.BunifuCustomLabel Name3;
@@ -1069,18 +819,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem tsSekolah;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem tsDatabase;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem tsSIP;
-        private System.Windows.Forms.ToolStripMenuItem tsInstall;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem tsCreate;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem tsSettings;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem8;
-        private System.Windows.Forms.ToolStripMenuItem tsHelpSQL;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem tsWebservice;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel8;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv;
@@ -1090,13 +828,14 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timerRefresh;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem9;
-        private System.Windows.Forms.ToolStripMenuItem tsTutorial;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLOCKIN;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLOCKOUT;
+        private Bunifu.Framework.UI.BunifuCustomLabel bCL_RunningText;
+        private System.Windows.Forms.Timer timerRunningText;
+        private System.Windows.Forms.ToolStripMenuItem runningTextToolStripMenuItem;
     }
 }
 

@@ -14,3 +14,15 @@ C:\Users\damar\Documents\Visual Studio 2017\READER\RawInput\obj\Debug\RawInput.c
 C:\Users\damar\Documents\Visual Studio 2017\READER\RawInput\obj\Debug\RawInput.dll
 C:\Users\damar\Documents\Visual Studio 2017\READER\RawInput\obj\Debug\RawInput.pdb
 C:\Users\damar\Documents\Visual Studio 2017\READER\RawInput\obj\Debug\RawInput.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Mandiri\READER\RawInput\bin\Debug\RawInput.dll
+C:\Users\damar\Documents\Mandiri\READER\RawInput\bin\Debug\RawInput.pdb
+C:\Users\damar\Documents\Mandiri\READER\RawInput\obj\Debug\RawInput.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Mandiri\READER\RawInput\obj\Debug\RawInput.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Mandiri\READER\RawInput\obj\Debug\RawInput.dll
+C:\Users\damar\Documents\Mandiri\READER\RawInput\obj\Debug\RawInput.pdb
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\RawInput\bin\Debug\RawInput.dll
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\RawInput\bin\Debug\RawInput.pdb
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\RawInput\obj\Debug\RawInput.csprojAssemblyReference.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\RawInput\obj\Debug\RawInput.csproj.CoreCompileInputs.cache
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\RawInput\obj\Debug\RawInput.dll
+C:\Users\damar\Documents\Visual Studio 2017\PROJECT6\MEM\READER\RawInput\obj\Debug\RawInput.pdb
